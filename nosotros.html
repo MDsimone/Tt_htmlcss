@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Nosotros</title>
+</head>
+<body>
+  <!-- Header con logo, título principal y título secundario -->
+  <header>
+     <div class="logo">
+       <img src="./imagen/guitarra.png" alt="Logo de la tienda"><a href="index.html"> Tu Sonido </a>
+     </div>
+     <h1> Instrumentos Musicales</h1>
+     <h2>Encuentra el sonido perfecto para ti</h2>
+  </header>
+
+  <!-- Menú principal -->
+ <nav class="main-nav">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li class="dropdown">
+        <a href="productos.html">Productos</a>
+          <ul class="dropdown-menu">
+              <li><a href="productos-tipo.html#guitarras">Guitarras</a></li>
+              <li><a href="productos-tipo.html#teclados">Teclados</a></li>
+              <li><a href="productos-tipo.html#vientos">Vientos</a></li>
+              <li><a href="productos-tipo.html#mic">Micrófonos</a></li>
+          </ul>
+      </li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="form.html">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- Contenedor principal que agrupa sidebar, main y contenido complementario -->
+  <div class="container">
+    <!-- Sidebar: Menú secundario -->
+    <aside class="sidebar">
+      <nav class="secondary-nav">
+        <ul>
+          <li><a href="#destacados">Productos Destacados</a></li>
+          <li><a href="#ofertas">Ofertas</a></li>
+          <li><a href="form.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main: Sección de productos utilizando grid-container -->
+    <main>
+      <section class="form-container">
+      <!--Formulario -->
+        <h2>Un poco de nuestra historia</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae erat at dolor scelerisque ullamcorper. Nullam nec accumsan eros, ut elementum metus. Sed consectetur massa libero, vitae dapibus nisl malesuada volutpat. Donec imperdiet posuere eleifend. Vivamus euismod feugiat vehicula. Mauris eleifend malesuada metus at fringilla. </p>
+        <p>Pellentesque porta tortor interdum porta scelerisque. Integer augue justo, aliquam in justo a, sagittis consequat diam. Integer sagittis, quam non rutrum pellentesque, ante nunc blandit tellus, nec sagittis arcu metus vel orci. Vivamus interdum tempus feugiat. Vivamus porttitor lacus ac nisi sollicitudin dictum. Nulla convallis pretium ex quis finibus. Nunc tristique quam magna, at condimentum urna lacinia in. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p> 
+        <p>Quisque ac mollis nisl. Donec efficitur lacus tellus, at viverra mauris suscipit at. Nullam a leo elit. Quisque aliquam feugiat lacus, eu varius purus auctor vel. Nunc pharetra quam nulla, nec bibendum augue rhoncus sed. </p>
+        <p>Phasellus tempus lectus eget ligula ultricies, vitae rhoncus libero tempor. Donec laoreet ligula lacus, et maximus metus mattis congue. Donec sit amet justo sit amet ex placerat mollis a et lectus. Nam nisl tortor, ultricies nec magna id, sodales molestie orci. Integer in pulvinar justo, at tincidunt tellus. Duis in magna tortor. Ut aliquet neque in consequat laoreet. Nam gravida iaculis mauris sed aliquet. Pellentesque quis nisi elementum, ullamcorper neque sed, fermentum mauris.</p>
+
+      </section>
+      <section class="datos-container">
+
+      </section>
+
+      <!--Sección reseñas-->
+      <section class="reseñas">
+      
+        <div class="flex-reviews">
+          <!-- Card de reseña 1 -->
+          <article class="review-card-contacto">
+            <div class="review-content">
+              <h3>Donde estamos</h3>
+        <p>Dirección: Calle Falsa 123, Ciudad, País</p>   
+            </div>
+          </article>
+        <!-- Card de reseña 2 -->
+          <article class="review-card-contacto">
+            <div class="review-content">
+              <h3>Teléfonos</h3>
+             <p>Teléfono: +54 11 1234-5678</p>
+            </div>
+          </article>
+      </section>   
+    </main>
+    <!-- Aside: Contenido complementario -->
+    <aside class="complementary">
+           <div class="publicidad">
+              <img src="./imagen/carrito-aside.png" alt="Publicidad - Carrito de compras con instrumentos musicales">
+            </div>
+      <h3>Complementa tu compra</h3>
+      <p>Descubre tips, reseñas y guías para sacar el máximo provecho a tus instrumentos musicales.</p>
+    </aside>
+  </div>
+
+  <!-- Footer: Datos de contacto -->
+  <footer>
+    <p>Dirección: Calle Falsa 123, Ciudad, País</p>
+    <p>Teléfono: +54 11 1234-5678</p>
+    <p>Email: contacto@instrumentosmusicales.com</p>
+  </footer>
+</body>
+</html>
