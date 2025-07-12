@@ -32,6 +32,7 @@
       </li>
       <li><a href="servicios.html">Servicios</a></li>
       <li><a href="form.html">Contacto</a></li>
+      <li> <a href ="carrito.html"> <img src="/imagen/carrito.png" alt="carrito" id="carrito"></a></li>
     </ul>
   </nav>
 
@@ -62,7 +63,7 @@
             <p class="description">Guitarra acústica de alta calidad, ideal para principiantes y profesionales.</p>
            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus impedit repellendus fuga officiis incidunt velit mollitia similique sed, adipisci id quia enim iure. Dolorum debitis, dolores excepturi at odit doloribus.</p>
             <a href="index.html" class="btn">Inicio</a>
-            <a href="index.html" class="btn">Comprar</a>
+            <button class="btn boton-agregar" type="button">Comprar</button>
         </div>
         </article>
         <!-- Card de producto 2 -->
@@ -74,7 +75,7 @@
             <p class="description">Batería completa para performance en vivo y estudio de grabación.</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus impedit repellendus fuga officiis incidunt velit mollitia similique sed, adipisci id quia enim iure. Dolorum debitis, dolores excepturi at odit doloribus.</p>
             <a href="index.html" class="btn">Inicio</a>
-            <a href="index.html" class="btn">Comprar</a>
+             <button class="btn boton-agregar" type="button">Comprar</button>
           </div>
         </article>
          <!-- Card de producto 3 -->
@@ -86,7 +87,7 @@
             <p class="description">B Fino charango construido con maderas secas y solidas, tapa de pino abeto caja de naranjillo.</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus impedit repellendus fuga officiis incidunt velit mollitia similique sed, adipisci id quia enim iure. Dolorum debitis, dolores excepturi at odit doloribus.</p>
             <a href="index.html" class="btn">Inicio</a>
-            <a href="index.html" class="btn">Comprar</a>
+             <button class="btn boton-agregar" type="button">Comprar</button>
           </div>
         </article>
 
@@ -99,6 +100,7 @@
             <p class="description">Guitarra electrica Yamaha RSP02T CG Revstar Professional Estuche Crisp Gold</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus impedit repellendus fuga officiis incidunt velit mollitia similique sed, adipisci id quia enim iure. Dolorum debitis, dolores excepturi at odit doloribus.</p>
             <a href="index.html" class="btn">Inicio</a>
+            <button class="btn boton-agregar" type="button">Comprar</button>
           </div>
         </article>
       </section>
@@ -140,6 +142,12 @@
 
 
     <aside class="complementary">
+       <div id="carrito" class="listCarrito">
+            <h2>Carrito de Compras</h2>
+            <ul id="lista-carrito"></ul>
+            <button id="vaciar-carrito" class="btn"  type="button">Vaciar Carrito</button>
+        </div>
+      </section>
            <div class="publicidad">
               <img src="./imagen/carrito-aside.png" alt="Publicidad - Carrito de compras con instrumentos musicales">
             </div>
@@ -154,5 +162,11 @@
     <p>Teléfono: +54 11 1234-5678</p>
     <p>Email: contacto@instrumentosmusicales.com</p>
   </footer>
+  <button type="button" id="btn-volver-arriba" title="Volver arriba">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <path d="M12 4L6 10H18L12 4Z" fill="white"/>
+  </svg>
+</button>
+  <script src="/assets/js/estilos.js"></script>
 </body>
 </html>
