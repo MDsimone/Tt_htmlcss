@@ -1,38 +1,40 @@
-document.addEventListener("DOMContentLoaded",() => {
+
  actualizarCarrito(); 
- const botonesAgregar = document.querySelectorAll(".boton-agregar");
-  botonesAgregar.forEach(function (boton) {
-    boton.addEventListener("click", function (e) {
-      const btnclic = e.currentTarget;
-      const card = btnclic.closest(".card-content");
-      console.log(card);
-       // sube hasta el contenedor del producto
-      if(!card) return;
-        const titulo = card.querySelector("h3").textContent; // toma el título
-      
-        const precioTexto = card.querySelector(".price").textContent.replace("$", "");//tomo el precio
-        const precio = parseFloat(precioTexto);//lo paso a numero
+ iniciarBotones();
+  function iniciarBotones(){
+        const botonesAgregar = document.querySelectorAll(".boton-agregar");
+        console.log(botonesAgregar);
 
-        const producto = {
-          id: titulo.toLowerCase().replace(/\s+/g, "-"), // 
-          nombre: titulo,
-          precio: precio
-        };
+      botonesAgregar.forEach(function (boton) {
+        boton.addEventListener("click", function (e) {
+          const btnclic = e.currentTarget;
+          const card = btnclic.closest(".card-content");
+          console.log(card);
+          // sube hasta el contenedor del producto
+          if(!card) return;
+            const titulo = card.querySelector("h3").textContent; // toma el título
+          
+           // const precioTexto = card.querySelector(".price").textContent.replace("$", "");//tomo el precio
+           const precioTexto = card.querySelector(".price").textContent.match(/[\d.]+/)[0]; 
+           const precio = parseFloat(precioTexto);//lo paso a numero
 
-        let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-        carrito.push(producto);
-        localStorage.setItem("carrito", JSON.stringify(carrito));
-        actualizarCarrito(); 
+            const producto = {
+              id: titulo.toLowerCase().replace(/\s+/g, "-"), // 
+              nombre: titulo,
+              precio: precio
+            };
 
-        btnclic.textContent = "Agregado ✅";
-        btnclic.disabled = true; // desactivo el botón
+            let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+            carrito.push(producto);
+            localStorage.setItem("carrito", JSON.stringify(carrito));
+            actualizarCarrito(); 
 
-
-
-    });
-   
-
+            btnclic.textContent = "Agregado ✅";
+            btnclic.disabled = true; // desactivo el botón
+        });
   });
+  }
+
     function actualizarCarrito() {
       const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
       const listaCarrito = document.getElementById("lista-carrito");
@@ -45,10 +47,10 @@ document.addEventListener("DOMContentLoaded",() => {
           listaCarrito.appendChild(li);
           console.log(li);
            });
-           //suma total 
+           //suma total con toFixed para tener 2 decimales
           const total = carrito.reduce((sum, producto) => sum + producto.precio, 0);
           const resumenFinal = document.createElement("div");
-          resumenFinal.innerHTML = `<strong>Total: $${total}</strong><br>`;
+          resumenFinal.innerHTML = `<strong>Total: $${total.toFixed(2)}</strong><br>`;
           listaCarrito.appendChild(resumenFinal);
       }
   const vaciarCarrito =  document.getElementById("vaciar-carrito")
@@ -81,4 +83,4 @@ document.addEventListener("DOMContentLoaded",() => {
   });
   
 
-});
+
